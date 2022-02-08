@@ -16,10 +16,10 @@
 
 from autopkglib import Processor, ProcessorError  # pylint: disable=import-error
 
-__all__ = ["StringReplacer"]
+__all__ = ["StringVersionReplacer"]
 
 
-class StringReplacer(Processor):
+class StringVersionReplacer(Processor):
     """This processor replaces a string within a variable with another string.
     Example would be to remove a file suffix from a string:
     input_string: "filename.dmg"
@@ -62,5 +62,5 @@ class StringReplacer(Processor):
 
 
 if __name__ == "__main__":
-    PROCESSOR = StringReplacer()
+    PROCESSOR = StringVersionReplacer()
     PROCESSOR.execute_shell()
