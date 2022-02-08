@@ -57,7 +57,7 @@ class StringVersionReplacer(Processor):
         replacement_string = self.env.get("replacement_string")
         self.output("Input String: {}".format(input_string))
         version = input_string.replace(string_to_replace, replacement_string)
-        self.env["version"] = output_string
+        self.env["version"] = version
         self.output("Verison: {}".format(version))
 
 
