@@ -25,7 +25,7 @@ class StringVersionReplacer(Processor):
     input_string: "filename.dmg"
     string_to_replace: ".dmg"
     replacement_string: ""
-    output_string: "filename"
+    version: "filename"
     """
 
     input_variables = {
