@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of Lens and creates a package.</string>
+	<key>Identifier</key>
+	<string>com.github.jlgonitzke.pkg.Lens_arm64</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Lens_Arm64</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jlgonitzke.download.Lens_arm64</string>
+	<key>Process</key>
+	<array>
+<dict>
+                <key>Processor</key>
+                <string>com.github.jlgonitzke.Autopkg/StringVersionReplacer</string>
+                <key>Arguments</key>
+                <dict>
+                    <key>input_string</key>
+                    <string>5.3.4-latest.20220120.1</string>
+                    <key>string_to_replace</key>
+                    <string>-latest.20220120.1</string>
+                    <key>replacement_string</key>
+                    <string>_Arm64</string>
+                </dict>
+            </dict>
+		<dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
+		</dict>
+	</array>
+</dict>
+</plist>
